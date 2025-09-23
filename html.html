@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Girisankar S.M. | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    /* Glowing river line effect */
+    .card-hover {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card-hover::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -100%;
+      width: 200%;
+      height: 4px; /* thickness of the glowing line */
+      background: linear-gradient(90deg, transparent, #00ffff, #00ffff, transparent);
+      filter: blur(6px); /* glow effect */
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card-hover:hover::before {
+      animation: flow-line 2s linear infinite;
+      opacity: 1;
+    }
+
+    .card-hover:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes flow-line {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6">
+    <h1 class="text-5xl md:text-6xl font-bold text-indigo-400 mb-4">Hi, I'm Girisankar S.M.</h1>
+    <p class="text-lg md:text-xl max-w-2xl">A passionate Computer Engineering student skilled in AI, ML, and Web Development. I love building innovative solutions that merge technology with creativity.</p>
+    <div class="mt-6 flex space-x-4">
+      <a href="https://www.linkedin.com/in/girisankar-s-m/" target="_blank" class="bg-indigo-500 px-6 py-2 rounded-full text-white hover:bg-indigo-600">LinkedIn</a>
+      <a href="https://github.com/Girisankarsm" target="_blank" class="bg-gray-700 px-6 py-2 rounded-full hover:bg-gray-600">GitHub</a>
+      <!-- Download Resume Button -->
+      <a href="Girisankar-Resume-main.pdf" download class="bg-green-500 px-6 py-2 rounded-full text-white hover:bg-green-600">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 px-6 max-w-5xl mx-auto" id="about">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-4">About Me</h2>
+    <p class="text-lg leading-relaxed">I’m a 3rd year Computer Engineering student at SRM University with a strong foundation in problem-solving, programming, and applied AI/ML. My goal is to create impactful solutions that bridge the gap between technology and people’s lives.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="py-16 px-6 max-w-5xl mx-auto" id="skills">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-6">Technical Skills</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl shadow text-center card-hover">Python, C, C++</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow text-center card-hover">Machine Learning, NLP</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow text-center card-hover">OpenCV, MediaPipe</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow text-center card-hover">Web Development (HTML, CSS, JS, Streamlit)</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow text-center card-hover">Data Visualization (Matplotlib, Chart.js)</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow text-center card-hover">Git, GitHub</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="py-16 px-6 max-w-5xl mx-auto" id="projects">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-6">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-800 p-6 rounded-xl shadow card-hover">
+        <h3 class="text-xl font-semibold mb-2">🖱️ Virtual Mouse Control</h3>
+        <p class="text-gray-400 mb-2">AI-powered Python app using MediaPipe & OpenCV to control computer with hand gestures. Features cursor, clicks, and exit gestures — futuristic and touchless!</p>
+        <p class="text-sm text-gray-500">Skills: GUI Interaction · Real-time Monitoring · OpenCV</p>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-xl shadow card-hover">
+        <h3 class="text-xl font-semibold mb-2">🧠 AI Resume Analyzer & Job Matcher</h3>
+        <p class="text-gray-400 mb-2">Streamlit web app that analyzes resumes against job descriptions, highlights missing skills, and provides improvement suggestions.</p>
+        <a href="https://github.com/Girisankarsm/AI-Resume-Analyzer-Job-Matcher" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-xl shadow card-hover">
+        <h3 class="text-xl font-semibold mb-2">📡 Sonar Rock vs Mine Classification</h3>
+        <p class="text-gray-400 mb-2">Machine Learning model using UCI dataset to classify sonar signals. Implemented PCA, multiple models, GridSearchCV, and evaluated with ROC/PR curves.</p>
+        <a href="https://github.com/Girisankarsm/Sonar-Rock-Mine-Classification" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-xl shadow card-hover">
+        <h3 class="text-xl font-semibold mb-2">🌦️ Weather Dashboard</h3>
+        <p class="text-gray-400 mb-2">Interactive Weather Dashboard using HTML, CSS, JS, Tailwind & Chart.js. Fetches real-time API data and visualizes weather trends beautifully.</p>
+        <a href="https://github.com/Girisankarsm/wheather_dashboard" target="_blank" class="text-indigo-400 hover:underline">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobbies Section -->
+  <section class="py-16 px-6 max-w-5xl mx-auto" id="hobbies">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-6">Hobbies & Interests</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl shadow text-center card-hover">
+        <i class='bx bx-paint text-5xl text-indigo-300 mb-4'></i>
+        <h3 class="text-xl font-semibold">Art</h3>
+        <p class="text-gray-400 text-sm mt-2">I enjoy sketching and exploring creativity through visuals.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow text-center card-hover">
+        <i class='bx bx-music text-5xl text-indigo-300 mb-4'></i>
+        <h3 class="text-xl font-semibold">Music</h3>
+        <p class="text-gray-400 text-sm mt-2">Listening to and discovering new genres fuels my imagination.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow text-center card-hover">
+        <i class='bx bx-book-open text-5xl text-indigo-300 mb-4'></i>
+        <h3 class="text-xl font-semibold">Reading</h3>
+        <p class="text-gray-400 text-sm mt-2">Books on history, technology, and business sharpen my mind.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 px-6 max-w-5xl mx-auto text-center" id="contact">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-6">Contact Me</h2>
+    <p class="text-gray-400 mb-4">Interested in working together? Let’s connect!</p>
+    <a href="mailto:gxr02005@gmail.com" class="bg-indigo-500 px-6 py-2 rounded-full text-white hover:bg-indigo-600">Email Me</a>
+  </section>
+
+  <footer class="py-6 text-center text-gray-500 text-sm">
+    © 2025 Girisankar S.M. |
+  </footer>
+
+</body>
+</html>
